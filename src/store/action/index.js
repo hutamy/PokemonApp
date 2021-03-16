@@ -1,13 +1,15 @@
 export const ADD_POKEMON = (pokemon) => {
   return (dispatch) => {
     const myPokemon = JSON.parse(JSON.parse(localStorage.getItem("pokemon")))
-    if(myPokemon.length === 0) {
+    let newPokemon = []
+    if(!myPokemon) {
       pokemon.id = 1
+      newPokemon.push(pokemon)
     }
     else if(myPokemon.length > 0) {
       pokemon.id = myPokemon[myPokemon.length-1].id + 1
+      newPokemon = myPokemon.concat(pokemon)
     }
-    const newPokemon = myPokemon.concat(pokemon)
     dispatch({
       type: "SET_POKEMON",
       payload: newPokemon

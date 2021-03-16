@@ -19,7 +19,7 @@ export default function MyPokemonList () {
           </div>
           <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {
-            pokemon.map((el, i) => {
+            pokemon !== null && pokemon.map((el, i) => {
               return ( 
                 <MyPokemonCard key={i} pokemon={el}/>
               )
