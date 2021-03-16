@@ -1,14 +1,18 @@
 export const ADD_POKEMON = (pokemon) => {
   return (dispatch) => {
-    const myPokemon = JSON.parse(JSON.parse(localStorage.getItem("pokemon")))
+    let myPokemon = JSON.parse(JSON.parse(localStorage.getItem("pokemon")))
     let newPokemon = []
-    if(!myPokemon) {
+    if(myPokemon === null) {
       pokemon.id = 1
       newPokemon.push(pokemon)
     }
     else if(myPokemon.length > 0) {
       pokemon.id = myPokemon[myPokemon.length-1].id + 1
       newPokemon = myPokemon.concat(pokemon)
+    }
+    else {
+      pokemon.id = 1
+      newPokemon.push(pokemon)
     }
     dispatch({
       type: "SET_POKEMON",
@@ -49,11 +53,12 @@ export const EDIT_POKEMON = (id, name) => {
   }
 }
 
-export const RESET_POKEMON = (pokemons) => {
+export const RESET_POKEMON = () => {
+  const myPokemon = JSON.parse(JSON.parse(localStorage.getItem("pokemon")))
   return (dispatch) => {
     dispatch({
       type: "SET_POKEMON",
-      payload: pokemons
+      payload: myPokemon
     })
   }
 }

@@ -105,9 +105,7 @@ export default function PokemonDetail() {
           <div className="flex justify-center">
             {
               pokemonDetail &&  pokemonDetail.types.map((el, i) => {
-                const color = ["red", "yellow", "green", "blue", "indigo", "pink", "purple" ]
-                const random = Math.ceil(Math.random() * color.length-1)
-                return <DetailPills key={i} name={el.type.name} color={color[random]}/>
+                return <DetailPills key={i} name={el.type.name} backgroundColor="#D1FAE5" color="#047857"/>
               })
             }
           </div>
@@ -126,7 +124,7 @@ export default function PokemonDetail() {
         </div>
         {
           pokemonDetail && pokemonDetail.abilities.map((el, i) => {
-            return <DetailPills key={i} name={el.ability.name} color="indigo"/>
+            return <DetailPills key={i} name={el.ability.name} backgroundColor="#E0E7FF" color="#4338CA"/>
           })
         }
         <div className="text-sm leading-6 space-y-1 text-gray-500 text-left pb-2">
@@ -134,7 +132,7 @@ export default function PokemonDetail() {
         </div>
         {
           pokemonDetail && pokemonDetail.moves.map((el, i) => {
-            return <DetailPills key={i} name={el.move.name} color="pink"/>
+            return <DetailPills key={i} name={el.move.name} backgroundColor="#FCE7F3" color="#BE185D"/>
           })
         }
       </div>

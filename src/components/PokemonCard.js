@@ -27,7 +27,7 @@ export default function PokemonCard ({ pokemon }) {
               {pokemon.name}
             </p>
             <div className="inline-flex pb-3">
-              <span className="rounded-full items-center py-1 pr-2.5 text-sm font-medium bg-indigo-100 text-indigo-700 mr-1 pl-2.5">
+              <span className="rounded-full items-center py-1 pr-2.5 text-sm font-medium mr-1 pl-2.5" style={{backgroundColor:"#E0E7FF", color:"#4338CA"}}>
                 <div className="inline-flex items-center">
                   <p> Owned: {count} </p>
                 </div>

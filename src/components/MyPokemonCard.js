@@ -29,7 +29,7 @@ export default function MyPokemonCard ({ pokemon }) {
               {pokemon.NEW_NAME ? pokemon.NEW_NAME : pokemon.name}
             </p>
             <div className="inline-flex pb-3">
-              <span onClick={() => releasePokemon(pokemon.id)} className="cursor-pointer rounded-full items-center py-1 pr-2.5 text-sm font-medium bg-yellow-200 text-yellow-700 mr-1 pl-2.5">
+              <span onClick={() => releasePokemon(pokemon.id)} className="cursor-pointer rounded-full items-center py-1 pr-2.5 text-sm font-medium mr-1 pl-2.5" style={{backgroundColor: "#FDE68A", color: "#B45309"}}>
                 <div className="inline-flex items-center">
                   <p> Released Pokemon </p>
                 </div>
