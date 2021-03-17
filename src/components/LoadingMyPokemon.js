@@ -10,7 +10,6 @@ export default function LoadingMyPokemon({ loading, setLoading }) {
 
   if(!loading) return <div></div>
   if(loading)
-
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto">
       <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -22,7 +21,7 @@ export default function LoadingMyPokemon({ loading, setLoading }) {
           <div>
             <div className="mt-3 pb-10 text-center sm:mt-5">
               <div className="flex justify-center">
-                <img src="http://www.pkparaiso.com/imagenes/xy/sprites/animados/amaura-2.gif" alt=""/> 
+                <img src="./asset/released.gif" alt=""/> 
               </div>  
               <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
                 Releasing your pokemon

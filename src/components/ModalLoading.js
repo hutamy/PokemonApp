@@ -24,9 +24,9 @@ export default function ModalLoading({ loading, catched, setLoading, setCatched 
         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
           <div>
             <div className="mt-3 pb-10 text-center sm:mt-5">
-              { loading && catched === null && <img src="https://i.pinimg.com/originals/40/f6/03/40f603b3e8b1fe98702ddbd62c08ebaa.gif" alt=""/> }
-              { catched === true && <img src="https://i.imgur.com/c4xFd4q.gif" alt=""/>}
-              { catched === false && <img src="https://i.pinimg.com/originals/66/89/dc/6689dc331be27e66349ce9a4d15ddff3.gif" alt=""/> }        
+              { loading && catched === null && <img src="./asset/loading.gif" alt=""/> }
+              { catched === true && <img src="./asset/catched.gif" alt=""/>}
+              { catched === false && <img src="./asset/missed.gif" alt=""/> }        
               <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
                 { loading && catched === null && "Try to catch your pokemon" }
                 { catched === true && "Congratulations!" }

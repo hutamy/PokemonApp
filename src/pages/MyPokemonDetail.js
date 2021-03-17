@@ -33,7 +33,7 @@ export default function MyPokemonDetail() {
     await setTimeout(function(){ 
       dispatch(REMOVE_POKEMON(id))
       history.push(`/?message=Successfully release ${inputName}`) 
-    }, 3000)
+    }, 4000)
   }
 
   async function handleSubmit (e) {

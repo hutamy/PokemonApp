@@ -14,7 +14,7 @@ export default function MyPokemonCard ({ pokemon }) {
     await setTimeout(function(){ 
       dispatch(REMOVE_POKEMON(id))
       history.push(`/?message=Successfully release pokemon ${pokemon.NEW_NAME ? pokemon.NEW_NAME : pokemon.name}`)
-    }, 3000)
+    }, 4000)
   }
 
   return (
